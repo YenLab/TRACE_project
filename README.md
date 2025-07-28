@@ -1,5 +1,33 @@
-## **TRACE Uncovers Three RUNX1 Binding Classes with Distinct Functional Divergence**
+# **RUNX1 Utilizes Novel 3bp-Spaced Motif Arrays to Regulate Cell-Context-Dependent Function**
 
-Transcription factors (TFs) recognize specific DNA sequences in the genome to modulate transcription, which is crucial for cell development and disease. Current in vitro reconstitution techniques for studying TF-DNA binding are complex and often rely on synthetic DNA, leading to discrepancies between experimental results and biological conditions. To address these challenges, we developed the Tagging and Recovery of Associated Chromatin Elements (TRACE) based on tagged immunoprecipitation. TRACE simplifies protein purification and incorporates endogenous，non-synthetic DNA, overcoming the limitations of synthetic DNA-based methods. Using TRACE, we uncovered two TF binding patterns: sharp (PRDM1) and broad (RUNX1). Within the broad pattern, RUNX1 utilizes novel motif arrays for DNA binding. Multi-omics analysis identified three RUNX1 binding site categories—classic motifs, motif arrays, and no-motif—each associated with distinct biological functions. In summary, TRACE advances TF-DNA interaction studies and reveals novel insights into TF recognition modes.
+**:writing_hand:Author**: Shan Liu
 
+**:email:Email**: 3shanliu3@gmail.com
 
+Copyright (c) 2025 YenLab@SKLEH. All rights reserved.
+
+## Introduction
+
+The transcription factor RUNX1 orchestrates hematopoietic differentiation but drives leukemogenesis, creating a functional paradox. RUNX1 binds open chromatin via a canonical 12-bp motif but most in vivo targets lack this sequence, challenging conventional TF-DNA interaction models. 
+
+To resolve this, we developed TRACE (Tagging and Recovery of Chromatin-associated Elements), a mammalian system employing endogenous DNA libraries to map RUNX1 binding in physiological contexts. 
+
+We uncover: 1) Novel motif arrays: RUNX1 targets inaccessible chromatin through novel 3bp-spaced motif arrays, forming alternative binding platforms. 2) Epigenetic plasticity: DNA methylation at motif array regions inversely correlates with differential TET2 expression across HSPC and AML, revealing cell-type-specific epigenetic crosstalk. 3) Functional complexity: Motif arrays regulate both lineage-specific and leukemic programs, connecting architecture to pathological switching. 
+
+Integrating TRACE-defined motif arrays with methylation dynamics, we demonstrate how RUNX1 toggles between hematopoiesis and leukemogenesis via a syntax-based mechanism, merging sequence arrangement with epigenetic context. 
+
+<img align="left" width=450 src="https://github.com/SANGO63/TRACE_project/blob/main/graphic_summary/TRACE_Graphical_Summary.png">  
+
+### :file_folder:Scripts organization
+
+- Scripts head with `0_` is for general preprocessing NGS data, include
+
+  `TRACE`, `ChIP-seq`,  `CUT&Tag`,  `WGBS`,  `MNase-seq` ,`RNA-seq` 
+
+- Script head with series number is pipeline for specific analysis follows the order in the TRACE paper.
+
+  Specifically, the `bash script` is for processing data and corresponding `R scripts` is used for downstream analysis, statistics and plotting.
+
+- Published HT-SELEX data was processed using the Inomotif package with modified Python code, as detailed in the directory: Inomotif_modified
+  
+- Scripts in the Script_pipeline folder was called by pipelines.
